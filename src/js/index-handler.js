@@ -55,7 +55,7 @@ const IndexHandler = (() => {
       getFormCityName(),
       receiveWeatherData,
       receiveWeatherDataError,
-      getTemperatureTypeSelected()
+      getTemperatureTypeSelected(),
     );
   };
 
