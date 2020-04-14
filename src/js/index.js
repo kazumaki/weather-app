@@ -1,3 +1,5 @@
+import WeatherAPI from './weather-api';
+
 const getData = (city, units = 'metric') => {
   const apiKey = '67a1de75c70034e312753131c19bba85';
   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`)
@@ -19,19 +21,28 @@ const getResult = (data) => {
     <p> Weather Desc: ${data.weather[0].description} </p>
     <p> Temp: °C ${Math.round(Number(data.main.temp))} <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png"> </p>
     `;
+
+  loader.classList.add('hide');
 }
 
 const getError = (error) => {
-  console.log(error);
+  //console.log(error);
+  loader.classList.add('hide');
 }
 
 const searchSubmit = (event) => {
   event.preventDefault();
   const city = document.querySelector('#city-name').value;
-  getData(city);
+  loader.classList.remove('hide');
+  console.log(WeatherAPI.getData(city, displayData));
+}
+
+const displayData = (data) => {
+  console.log(data);
 }
 
 window.onload = () => {
   const searchButton = document.querySelector('#submit-button');
-  searchButton.addEventListener('click', searchSubmit)
+  searchButton.addEventListener('click', searchSubmit);
+  loader = document.querySelector('#loader');
 }
