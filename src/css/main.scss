@@ -1,5 +1,108 @@
-.meme {
+@import 'owfont-regular.css';
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#submit-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  i {
+    color: lightyellow;
+  }
+
+  i:hover {
+    opacity: 0.25;
+    transition: linear opacity 500ms;
+  }
+}
+
+#city-name {
+  border: none;
+  width: 95%;
+  color: lightyellow;
+  background-color: darkkhaki;
+}
+
+#city-name:hover {
+  opacity: 0.5;
+  transition: linear opacity 500ms;
+}
+
+::placeholder {
+  color: lightyellow;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.search-form {
   display: flex;
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  min-width: 450px;
+  min-height: 150px;
+  background-color: darkkhaki;
+  margin: 0 auto;
+}
+
+.city-info {
+  width: 100%;
+}
+
+.summary {
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid moccasin;
+  border-bottom: 2px solid moccasin;
+
+  span {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .city-name {
+    color: lightyellow;
+  }
+}
+
+.main-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.temperature {
+  display: flex;
+  align-items: center;
+}
+
+.temp-value {
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+.other-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+    font-weight: 700;
+    color: lightyellow;
+  }
+}
+
+.owf {
+  color: lightyellow;
 }
 
 .loader {

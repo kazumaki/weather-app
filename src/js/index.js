@@ -1,4 +1,7 @@
 import WeatherAPI from './weather-api';
+import IndexHandler from './index-handler';
+
+let loader;
 
 const getData = (city, units = 'metric') => {
   const apiKey = '67a1de75c70034e312753131c19bba85';
@@ -39,10 +42,11 @@ const searchSubmit = (event) => {
 
 const displayData = (data) => {
   console.log(data);
+  getResult(data);
 }
 
 window.onload = () => {
   const searchButton = document.querySelector('#submit-button');
   searchButton.addEventListener('click', searchSubmit);
-  loader = document.querySelector('#loader');
+  loader = IndexHandler.getLoader();
 }

@@ -5,16 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="dist/main.css">
+  <script src="https://kit.fontawesome.com/ea35fd0321.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <script src="dist/main.js"></script>
 </head>
 <body>
-  <form>
-    <input type="text" name="city-name" id="city-name">
-    <input type="submit" name="submit-button" id="submit-button" value="Search">
-  </form>
-  <div id="loader" class="loader hide"></div>
-  <div class="city-info">
-
+  <div class="main-content">
+    <form class="search-form">
+      <input type="text" name="city-name" id="city-name" placeholder="Search for a city">
+      <button type="submit" name="submit-button" id="submit-button">
+        <i class="fas fa-search fa-2x"></i>
+      </button>
+    </form>
+    <div id="loader" class="loader hide"></div>
+    <div class="city-info">
+      <div class="summary">
+        <span class="city-name">Pitangui</span>
+      </div>
+      <div class="main-info">
+        <div class="temperature">
+          <i class="owf owf-800 owf-5x"></i> <span class="temp-value">25 °C</span>
+        </div>
+        <div class="other-info">
+          <span>Precipitation: 5%</span>
+          <span>Humidity: 67%</span>
+          <span>Wind: 10km/h</span>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
