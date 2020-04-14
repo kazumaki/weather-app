@@ -13,7 +13,11 @@ const IndexHandler = (() => {
   const getWindElement = () => document.querySelector('.wind');
 
   const getTemperatureTypeSelected = () => { 
-    return document.querySelector('#celsius').checked ? 'metric' : 'imperial'; 
+    if (document.querySelector('#celsius').checked) {
+      return 'metric';
+    };
+
+    return 'imperial'; 
   };
 
   const setWeatherData = (data) => {
