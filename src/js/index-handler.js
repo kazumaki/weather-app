@@ -5,14 +5,16 @@ const IndexHandler = (() => {
   const getFormCityName = () => document.querySelector('#city-name').value;
   const getErrorMessage = () => document.querySelector('#error-message');
   const getSearchButton = () => document.querySelector('#submit-button');
-
-  const getTemperatureTypeSelected = () => { return document.querySelector('#celsius').checked ? 'metric' : 'imperial' };
   const getCityNameElement = () => document.querySelector('.city-name');
   const getWeatherIconElement = () => document.querySelector('#weather-icon');
   const getTemperatureElement = () => document.querySelector('.temperature-value');
   const getPressureElement = () => document.querySelector('.pressure');
   const getHumidityElement = () => document.querySelector('.humidity');
   const getWindElement = () => document.querySelector('.wind');
+
+  const getTemperatureTypeSelected = () => { 
+    return document.querySelector('#celsius').checked ? 'metric' : 'imperial'; 
+  };
 
   const setWeatherData = (data) => {
     getCityNameElement().innerHTML = data.name;
