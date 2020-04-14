@@ -16,6 +16,10 @@
       <button type="submit" name="submit-button" id="submit-button">
         <i class="fas fa-search fa-2x"></i>
       </button>
+      <label for="celsius">°C</label>
+      <input type="radio" id="celsius" name="temperature-type" value="celsius" checked="checked">
+      <label for="fahrenheit">°F</label>
+      <input type="radio" id="fahrenheit" name="temperature-type" value="fahrenheit">
     </form>
     <div id="loader" class="loader hide"></div>
     <div class="hide" id="error-message"></div>
@@ -30,7 +34,7 @@
         <div class="other-info">
           <span class="pressure">Pressure: 5 hPa</span>
           <span class="humidity">Humidity: 67%</span>
-          <span class="wind">Wind: 10km/h</span>
+          <span class="wind">Wind: 10m/s</span>
         </div>
       </div>
     </div>

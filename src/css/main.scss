@@ -34,7 +34,7 @@ body {
 #error-message {
   font-weight: 700;
   font-size: 1.25rem;
-  color: lightyellow;
+  color: red;
 }
 
 ::placeholder {
@@ -91,6 +91,8 @@ body {
 .temperature {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  min-width: 30%;
 }
 
 .temperature-value {

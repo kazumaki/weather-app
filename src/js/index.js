@@ -28,7 +28,6 @@ const getResult = (data) => {
 }
 
 const getError = (error) => {
-  //console.log(error);
   loader.classList.add('hide');
 }
 
