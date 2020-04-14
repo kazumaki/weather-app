@@ -6,7 +6,7 @@ const IndexHandler = (() => {
   const getErrorMessage = () => document.querySelector('#error-message');
   const getSearchButton = () => document.querySelector('#submit-button');
 
-  const getTemperatureTypeSelected = () => (document.querySelector('#celsius').checked ? 'metric' : 'imperial');
+  const getTemperatureTypeSelected = () => { return document.querySelector('#celsius').checked ? 'metric' : 'imperial' };
   const getCityNameElement = () => document.querySelector('.city-name');
   const getWeatherIconElement = () => document.querySelector('#weather-icon');
   const getTemperatureElement = () => document.querySelector('.temperature-value');
@@ -16,22 +16,25 @@ const IndexHandler = (() => {
 
   const setWeatherData = (data) => {
     getCityNameElement().innerHTML = data.name;
-    getWeatherIconElement().classList = "";
-    getWeatherIconElement().classList.add("owf", "owf-5x", `owf-${data.weather[0].id}`)
+    getWeatherIconElement().classList = '';
+    getWeatherIconElement().classList.add('owf', 'owf-5x', `owf-${data.weather[0].id}`);
     getTemperatureElement().innerHTML = getTemperatureTypeSelected() === 'metric' ? `${Math.round(data.main.temp)} °C` : `${Math.round(data.main.temp)} °F`;
     getPressureElement().innerHTML = `Pressure: ${data.main.pressure}hPa`;
     getHumidityElement().innerHTML = `Humidity: ${data.main.humidity}%`;
     getWindElement().innerHTML = getTemperatureTypeSelected() === 'metric' ? `Humidity: ${data.wind.speed}meters/s` : `Humidity: ${data.wind.speed}miles/h`;
     getLoader().classList.add('hide');
-  }
+  };
 
   const showWeatherDataError = (data) => {
     getErrorMessage().classList.remove('hide');
     getErrorMessage().innerHTML = data.message[0].toUpperCase() + data.message.slice(1);
-  }
+  };
 
   const receiveWeatherData = (data) => {
-    data.cod === 200 ? setWeatherData(data) : showWeatherDataError(data);
+    if (data.cod === 200) {
+      return setWeatherData(data)
+    }
+    return showWeatherDataError(data);
   }
 
   const receiveWeatherDataError = (error) => {
