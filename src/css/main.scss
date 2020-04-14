@@ -31,6 +31,12 @@ body {
   transition: linear opacity 500ms;
 }
 
+#error-message {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: lightyellow;
+}
+
 ::placeholder {
   color: lightyellow;
   font-size: 1.25rem;
@@ -39,6 +45,7 @@ body {
 
 .search-form {
   display: flex;
+  padding: 10px;
   width: 100%;
 }
 
@@ -61,6 +68,7 @@ body {
 .summary {
   display: flex;
   justify-content: center;
+  padding: 5px;
   border-top: 2px solid moccasin;
   border-bottom: 2px solid moccasin;
 
@@ -77,6 +85,7 @@ body {
 .main-info {
   display: flex;
   justify-content: space-between;
+  padding: 25px
 }
 
 .temperature {
@@ -84,7 +93,7 @@ body {
   align-items: center;
 }
 
-.temp-value {
+.temperature-value {
   font-weight: 700;
   font-size: 1.75rem;
 }
@@ -107,10 +116,10 @@ body {
 
 .loader {
   border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
+  border-top: 16px solid lightyellow; /* Blue */
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 60px;
+  height: 60px;
   animation: spin 2s linear infinite;
 }
 

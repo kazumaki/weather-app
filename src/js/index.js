@@ -1,4 +1,3 @@
-import WeatherAPI from './weather-api';
 import IndexHandler from './index-handler';
 
 let loader;
@@ -46,7 +45,5 @@ const displayData = (data) => {
 }
 
 window.onload = () => {
-  const searchButton = document.querySelector('#submit-button');
-  searchButton.addEventListener('click', searchSubmit);
-  loader = IndexHandler.getLoader();
+  IndexHandler.initialize();
 }
