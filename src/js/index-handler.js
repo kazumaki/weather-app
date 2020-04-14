@@ -52,25 +52,25 @@ const IndexHandler = (() => {
     getLoader().classList.remove('hide');
     getErrorMessage().classList.add('hide');
     WeatherAPI.getData(
-        getFormCityName(),
-        receiveWeatherData,
-        receiveWeatherDataError,
-        getTemperatureTypeSelected()
-      );
-  }
+      getFormCityName(),
+      receiveWeatherData,
+      receiveWeatherDataError,
+      getTemperatureTypeSelected()
+    );
+  };
 
   const initialize = () => {
     getSearchButton().addEventListener('click', searchSubmit);
     getCityNameElement().innerHTML = '';
-    getWeatherIconElement().classList = "";
+    getWeatherIconElement().classList = '';
     getTemperatureElement().innerHTML = '';
     getPressureElement().innerHTML = '';
     getHumidityElement().innerHTML = '';
     getWindElement().innerHTML = '';
     getLoader().classList.add('hide');
-  }
+  };
 
-  return {initialize}
+  return { initialize };
 })();
 
 export default IndexHandler;

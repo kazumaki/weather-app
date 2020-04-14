@@ -7,10 +7,10 @@ const WeatherAPI = (() => {
     })
       .then(resolve => resolve.json())
       .then(data => successCallback(data))
-      .catch(error => errorCallback(error))
+      .catch(error => errorCallback(error));
   };
 
-  return {getData}
+  return { getData };
 })();
 
 export default WeatherAPI;
