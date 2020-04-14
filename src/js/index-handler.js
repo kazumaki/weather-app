@@ -12,12 +12,12 @@ const IndexHandler = (() => {
   const getHumidityElement = () => document.querySelector('.humidity');
   const getWindElement = () => document.querySelector('.wind');
 
-  const getTemperatureTypeSelected = () => { 
+  const getTemperatureTypeSelected = () => {
     if (document.querySelector('#celsius').checked) {
       return 'metric';
-    };
+    }
 
-    return 'imperial'; 
+    return 'imperial';
   };
 
   const setWeatherData = (data) => {
@@ -38,20 +38,25 @@ const IndexHandler = (() => {
 
   const receiveWeatherData = (data) => {
     if (data.cod === 200) {
-      return setWeatherData(data)
+      return setWeatherData(data);
     }
     return showWeatherDataError(data);
-  }
+  };
 
-  const receiveWeatherDataError = (error) => {
+  const receiveWeatherDataError = () => {
     getLoader().classList.add('hide');
-  }
+  };
 
   const searchSubmit = (event) => {
     event.preventDefault();
     getLoader().classList.remove('hide');
     getErrorMessage().classList.add('hide');
-    WeatherAPI.getData(getFormCityName(), receiveWeatherData, receiveWeatherDataError, getTemperatureTypeSelected());
+    WeatherAPI.getData(
+        getFormCityName(),
+        receiveWeatherData,
+        receiveWeatherDataError,
+        getTemperatureTypeSelected()
+      );
   }
 
   const initialize = () => {
