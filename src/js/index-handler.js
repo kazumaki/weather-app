@@ -27,7 +27,7 @@ const IndexHandler = (() => {
     getTemperatureElement().innerHTML = getTemperatureTypeSelected() === 'metric' ? `${Math.round(data.main.temp)} °C` : `${Math.round(data.main.temp)} °F`;
     getPressureElement().innerHTML = `Pressure: ${data.main.pressure}hPa`;
     getHumidityElement().innerHTML = `Humidity: ${data.main.humidity}%`;
-    getWindElement().innerHTML = getTemperatureTypeSelected() === 'metric' ? `Humidity: ${data.wind.speed}meters/s` : `Humidity: ${data.wind.speed}miles/h`;
+    getWindElement().innerHTML = getTemperatureTypeSelected() === 'metric' ? `Wind Speed: ${data.wind.speed}meters/s` : `Wind Speed: ${data.wind.speed}miles/h`;
     getLoader().classList.add('hide');
   };
 
