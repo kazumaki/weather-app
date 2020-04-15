@@ -1,0 +1,135 @@
+@import 'owfont-regular.css';
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#submit-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  i {
+    color: lightyellow;
+  }
+
+  i:hover {
+    opacity: 0.25;
+    transition: linear opacity 500ms;
+  }
+}
+
+#city-name {
+  border: none;
+  width: 95%;
+  color: lightyellow;
+  background-color: darkkhaki;
+}
+
+#city-name:hover {
+  opacity: 0.5;
+  transition: linear opacity 500ms;
+}
+
+#error-message {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: red;
+}
+
+::placeholder {
+  color: lightyellow;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  min-width: 450px;
+  min-height: 150px;
+  background-color: darkkhaki;
+  margin: 0 auto;
+}
+
+.city-info {
+  width: 100%;
+}
+
+.summary {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  border-top: 2px solid moccasin;
+  border-bottom: 2px solid moccasin;
+
+  span {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .city-name {
+    color: lightyellow;
+  }
+}
+
+.main-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px
+}
+
+.temperature {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 30%;
+}
+
+.temperature-value {
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+.other-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+    font-weight: 700;
+    color: lightyellow;
+  }
+}
+
+.owf {
+  color: lightyellow;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid lightyellow; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hide {
+  display: none;
+}
