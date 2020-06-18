@@ -1,6 +1,6 @@
 # Weather App
 
-In this project you are able to search by almost any city in the world and get some data back to be displayed, like: `Temperature`, `Pressure`, `Humidity` and `Wind Speed`.
+In this project, you can search by almost any city in the world and get some data back to be displayed, like: `Temperature`, `Pressure`, `Humidity` and `Wind Speed`.
 
 ## Screenshot
 
@@ -12,7 +12,7 @@ Clone the repository into your local computer.
 
 ### Installing
 
-First you'll have to install the newest version of [Node](https://nodejs.org/en/download/). Otherwise the npx command could not be available. Then move into the project main directory on the console and follow the instructions below. 
+First, you'll have to install the newest version of [Node](https://nodejs.org/en/download/). Otherwise, the npx command could not be available. Then move into the project main directory on the console and follow the instructions below. 
 
 Install all packages:
 
