@@ -4,7 +4,7 @@ In this project you are able to search by almost any city in the world and get s
 
 ## Screenshot
 
-![Screenshot of the webpage](src/images/screenshot.png)
+![Screenshot of the webpage](src/images/screenshot.png) 
 
 ## Getting Started
 
