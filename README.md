@@ -1,6 +1,6 @@
 # Weather App
 
-In this project, you can search by almost any city in the world and get some data back to be displayed, like: `Temperature`, `Pressure`, `Humidity` and `Wind Speed`.
+A weather app that pulls from the OpenWeatherMap API to allow users to search for and view the forecast in cities worldwide. Built with JavaScript.
 
 ## Screenshot
 
