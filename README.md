@@ -56,9 +56,9 @@ output: {
 
 ## Ideas for improvement
 
-- Make the design responsive and look nicer.
-- Display more data to the user.
-- Be able to search by country or state, instead of just cities.
+- Make the design responsive and look nicer
+- Display more data to the user
+- Be able to search by country or state, instead of just cities
 
 ## Built With
 
