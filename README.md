@@ -54,6 +54,12 @@ output: {
 
 [From Webpack documentation:](https://webpack.js.org/guides/production/) Technically, NODE_ENV is a system environment variable that Node.js exposes into running scripts. It is used by convention to determine dev-vs-prod behavior by server tools, build scripts, and client-side libraries. Contrary to expectations, process.env.NODE_ENV **is not set to "production"** within the build script webpack.config.js. Thus, conditionals like `process.env.NODE_ENV === 'production' ? '[name].[hash].bundle.js' : '[name].bundle.js'` within webpack configurations do not work as expected.
 
+## Ideas for improvement
+
+- Make the design responsive and look nicer.
+- Display more data to the user.
+- Be able to search by country or state, instead of just cities.
+
 ## Built With
 
 * [JavaScript](https://www.javascript.com/) - Programming language used
