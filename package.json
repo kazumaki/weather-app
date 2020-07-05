@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "prod": "NODE_ENV=production node server.js",
-    "postinstall": "webpack -p",
+    "start": "./node_modules/webpack/bin/webpack.js -p --progress && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
