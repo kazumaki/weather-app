@@ -10,6 +10,9 @@ A weather app that pulls from the OpenWeatherMap API to allow users to search fo
 
 Clone the repository into your local computer.
 
+## Live Version
+[Live Version](http://vinicius-weather-app.herokuapp.com/)
+
 ### Installing
 
 First, you'll have to install the newest version of [Node](https://nodejs.org/en/download/). Otherwise, the npx command could not be available. Then move into the project main directory on the console and follow the instructions below. 
