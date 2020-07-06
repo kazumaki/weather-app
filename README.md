@@ -1,6 +1,6 @@
 # Weather App
 
-In this project you are able to search by almost any city in the world and get some data back to be displayed, like: `Temperature`, `Pressure`, `Humidity` and `Wind Speed`.
+A weather app that pulls from the OpenWeatherMap API to allow users to search for and view the forecast in cities worldwide. Built with JavaScript.
 
 ## Screenshot
 
@@ -12,7 +12,7 @@ Clone the repository into your local computer.
 
 ### Installing
 
-First you'll have to install the newest version of [Node](https://nodejs.org/en/download/). Otherwise the npx command could not be available. Then move into the project main directory on the console and follow the instructions below. 
+First, you'll have to install the newest version of [Node](https://nodejs.org/en/download/). Otherwise, the npx command could not be available. Then move into the project main directory on the console and follow the instructions below. 
 
 Install all packages:
 
@@ -53,6 +53,12 @@ output: {
 ```
 
 [From Webpack documentation:](https://webpack.js.org/guides/production/) Technically, NODE_ENV is a system environment variable that Node.js exposes into running scripts. It is used by convention to determine dev-vs-prod behavior by server tools, build scripts, and client-side libraries. Contrary to expectations, process.env.NODE_ENV **is not set to "production"** within the build script webpack.config.js. Thus, conditionals like `process.env.NODE_ENV === 'production' ? '[name].[hash].bundle.js' : '[name].bundle.js'` within webpack configurations do not work as expected.
+
+## Ideas for improvement
+
+- Make the design responsive and look nicer
+- Display more data to the user
+- Be able to search by country or state, instead of just cities
 
 ## Built With
 
